@@ -1,7 +1,67 @@
 // out: "styles.css", compress: true, sourceMap: true
-//relativeUrls: true
-@import 'vars.less';
+@import "vars.less";
 
 container{
     background-color: @bg-light-color;
+    font-family: @font;
 }
+.logo{
+    margin-left: 45px;
+    max-width: 130px;
+    max-height: 51px;
+}
+header{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items:baseline;
+        font-size: 20px;
+        color: @menu-text-color ;
+        ul{ padding-left: 0%;
+            list-style: none;}
+    
+    .nav-links{
+            display: flex;
+            justify-content: space-around;
+            padding-left: 0%;
+            margin-top:20px;
+            margin-right: 40px;
+            list-style: none;
+            li{
+           padding: 20px;
+           margin: 0 10px;
+            transition: all ease 300ms;
+           &:hover{ color: darken(@menu-text-color,30%);}
+           span{ color:lighter(@menu-text-color, 30%);
+        font-size: 14px;}
+            }
+            a{  
+                text-decoration: none;
+                color: @menu-text-color;
+                padding:15px 30px; 
+                &:hover{ color:darken(@secondary-dark-color, 30%);}
+                }
+            .contact{
+                color: @secondary-dark-color;
+                border:solid  1px @secondary-dark-color;
+                border-radius: 12px;
+                &:hover{ color:darken(@secondary-dark-color, 30%);}}
+            ul{ 
+                &:hover{cursor: pointer;
+                        li{visibility: visible;}}
+                li{ display: flex;
+                    flex-direction: column;
+                    margin: 0%;
+                    visibility:hidden;
+                    padding-left: 0%;
+                    a{  
+                        text-align: start;
+                        padding-right: 10px;
+                        padding-left: 0%;
+                        margin: 0%;
+                    }
+                    a:hover{ color:darken(@menu-text-color, 30%);}
+                   }
+                }
+              }}
+
