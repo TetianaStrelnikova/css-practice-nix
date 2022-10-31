@@ -3,7 +3,7 @@
 
 container{
     background-color: @bg-light-color;
-    font-family: @font;
+    font-family: @font-main;
 }
 .logo{
     margin-left: 45px;
@@ -48,11 +48,11 @@ header{
                 &:hover{ color:darken(@secondary-dark-color, 30%);}}
             ul{ 
                 &:hover{cursor: pointer;
-                        li{visibility: visible;}}
-                li{ display: flex;
+                        li{display: flex;}}
+                li{ display: none;
                     flex-direction: column;
                     margin: 0%;
-                    visibility:hidden;
+                    
                     padding-left: 0%;
                     a{  
                         text-align: start;
@@ -63,5 +63,19 @@ header{
                     a:hover{ color:darken(@menu-text-color, 30%);}
                    }
                 }
-              }}
-
+              }
+            
+            }
+section{
+    font-family: @font-secondary;
+    .form{
+    padding: 30px;
+            h2{
+                text-transform: capitalize;
+                font-size: 50px;
+                font-weight: 400;
+                line-height: 25px;}
+            h5{font-family:@font-main ;
+                font-size: 20px;
+            }
+            }}
