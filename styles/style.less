@@ -3,9 +3,11 @@
 
 .submit{
     margin-top:25px;
-    padding:10px 40px;
+    padding:10px 40px 10px 40px;
     border-radius: 20px;
     border:none;
+    font-size: 12px;
+   
 }
 
 container{
@@ -14,22 +16,35 @@ container{
     width: 100%;
 }
 .logo{
-    margin-left: 45px;
+    margin-left: 25px;
     max-width: 130px;
     max-height: 51px;
+    padding-left: 40px;
+    height: auto;
+    @media  (max-width: 850px){
+        max-width: 100px;
+        margin-left: 30px;
+       
+   }
+   @media  (max-width: 750px){
+    max-width: 80px;
+    padding-left: 0px;
+   
+}
 }
 header{
-    
-        padding-top: 10px;
         display: flex;
         justify-content: space-between;
         align-items:baseline;
         font-size: 20px;
         color: @menu-text-color ;
         background-color: @bg-dark-color;
+        @media  (max-width: 900px){
+            font-size: 12px;}
+
+
         ul{ padding-left: 0%;
-            list-style: none;
-       }
+            list-style: none; }
     
     .nav-links{
             display: flex;
@@ -38,32 +53,46 @@ header{
             margin-top:20px;
             margin-right: 40px;
             list-style: none;
+            transition: all ease 300ms;
+            @media  (max-width: 750px){
+                margin-right: 10px;
+            }
             li{
            padding: 20px;
            margin: 0 10px;
-            transition: all ease 300ms;
-           &:hover{ color: darken(@menu-text-color,30%);}
-           span{ color:lighter(@menu-text-color, 30%);
-        font-size: 14px;}
+           @media  (max-width: 700px){
+            padding: 10px;
+            margin: 0 5px;
+        }
+            @media  (max-width: 600px){
+            padding: 0px;
+            margin: 10px;}
+            &:hover{ color: darken(@menu-text-color,30%);}
+            span{ color:lighter(@menu-text-color, 30%);
+                font-size: 14px;}
             }
             a{  
                 text-decoration: none;
                 color: @menu-text-color;
                 padding:15px 30px; 
+                transition: all ease 300ms;
                 &:hover{ color:darken(@secondary-dark-color, 30%);}
+                @media  (max-width: 600px){
+                    padding:10px 15px;}
                 }
             .contact{
                 color: @secondary-dark-color;
                 border:solid  1px @secondary-dark-color;
                 border-radius: 12px;
+                transition: all ease 300ms;
                 &:hover{ color:darken(@secondary-dark-color, 30%);}}
-            ul{ 
+            ul{
                 &:hover{cursor: pointer;
                         li{display: flex;}}
                 li{ display: none;
                     flex-direction: column;
                     margin: 0%;
-                    
+                    transition: all ease 300ms 1s;
                     padding-left: 0%;
                     a{  
                         text-align: start;
@@ -73,56 +102,102 @@ header{
                     }
                     a:hover{ color:darken(@menu-text-color, 30%);}
                    }
-                }
-              }
+                }}
             
             }
 section{
     font-family: @font-secondary;
     display: grid;
     grid-template-columns: 40% 60%;
-    
+    @media  (max-width: 600px){
+        grid-template-columns: 50% 50%;}
     .form{
         background-color: @bg-dark-color;
-        padding: 50px;
-        
+       padding: 70px;
+       @media  (max-width: 750px){
+        padding-top: 10px;
+        padding-left: 30px;
+       padding-bottom: 30px;
+    }
             h2{
                 text-transform: capitalize;
                 font-size: 55px;
                 line-height: 40px;
-                font-weight: 600;}
+                font-weight: 600;
+                @media  (max-width: 1300px){
+                    font-size: 40px;
+                    line-height: 30px;
+                }
+                @media  (max-width: 1100px){
+                    font-size: 30px;
+                    line-height: 25px;
+               }
+               @media  (max-width: 850px){
+                font-size: 22px;
+                line-height: 20px;
+           }
+           @media  (max-width: 600px){
+            font-size: 18px;
+                line-height: 15px;
+            }
+           }
             h5{font-family:@font-main ;
                 font-size: 16px;
                 font-weight:600;
+                @media  (max-width: 1100px){
+                    font-size: 12px;
+               }
             }
             form{
            align-items: center;
             
             input{
                 background-color:@secondary-light-color;
-                 .submit
+                 .submit;
+                
+                 @media  (max-width: 850px){
+                    max-width: 100px;
+                   
+               }
+               @media  (max-width: 600px){
+                max-width: 70px;}
                  
                 }
             input:last-of-type{
                 max-width: 50px;
+                
+                
             }
             button{ 
-
                 color: white;
                 background-color: @secondary-dark-color;
                 .submit }
             }}
-        .pic{
+    .pic{
             background-color:@secondary-light-color;
-            position: relative;
+            position: relative;  
+           
             img{
             position: absolute;
-            top: 29%;
+            bottom: -5%;
             left: 20%;
             box-sizing: border-box;
-            height: auto;}
-        }
         
-        
-        }
-           
+            @media  (max-width: 1300px){
+                max-width: 500px;
+                left:10%;
+            }
+            @media  (max-width: 1100px){
+                 left:10%;
+            }
+            @media  (max-width: 1100px){
+                max-width: 400px;
+            }
+            @media  (max-width: 750px){
+            max-width: 300px;}
+            @media  (max-width: 700px){
+                max-width: 250px;
+                left: 5%;}
+            @media  (max-width: 555px){
+                max-width: 200px;    }}}
+            }
