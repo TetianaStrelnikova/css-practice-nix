@@ -1,6 +1,17 @@
 // out: "styles.css", compress: true, sourceMap: true
 @import "vars.less";
-
+.h4{
+    font-size: 40px;
+    color: darken(@menu-text-color, 30%);
+    font-weight: 300;
+}
+.h6{
+    text-transform: uppercase;
+    color: darken( @menu-text-color, 40%);
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 5%;
+}
 .submit{
     margin-top:25px;
     padding:10px 40px 10px 40px;
@@ -69,15 +80,15 @@ header{
             }
             @media  (max-width: 400px){
                flex-direction: row-reverse;
-               
+        
             }
             li{
            padding: 20px;
            margin: 0 10px;
            @media  (max-width: 700px){
             padding: 10px;
-            margin: 0 20px;
-           
+            margin: 0 5px;
+    
         }
             @media  (max-width: 600px){
             padding: 0px;
@@ -102,8 +113,6 @@ header{
                 transition: all ease 300ms;
                 &:hover{ color:darken(@secondary-dark-color, 30%);}}
             ul{ 
-               
-          
 
                 &:hover{cursor: pointer;
                         li{display: flex;}}
@@ -121,10 +130,8 @@ header{
                     a:hover{ color:darken(@menu-text-color, 30%);}
                  
                    }
-                }}
-            
-            }
-section{
+                }} }
+.hero{
     font-family: @font-secondary;
     display: grid;
     grid-template-columns: 40% 60%;
@@ -261,5 +268,57 @@ section{
             @media  (max-width: 550px){
                 max-width: 200px; 
             position: relative;   }
-            }}
-            }
+            }}}
+.features{
+    h4{.h4;
+    margin: 0 auto;
+    margin-top: 10%;}
+    hr{ width: 50px;
+        margin: o auto;
+        background-color: @bg-footer-color;
+        height: 1px}
+    h6{.h6;
+        @media(max-width:450px){
+            font-size: 12px;;
+           }}
+    text-align: center;
+.features-cards{
+    display: flex;
+    justify-content: space-around;
+    box-shadow: @shadow;
+    margin: 50px;
+    @media(max-width:600px){
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+.card{
+    max-width: 250px;
+    margin: 70px;
+    margin-bottom: 30px;
+   
+    @media(max-width:1000px){
+       margin: 20px;
+    }
+    @media(max-width:600px){
+       max-width: 300px;
+      }
+    h4{.h4;
+        @media(max-width:1000px){
+           font-size: 25px;
+         }}
+ .image{
+    height: 100px;
+    opacity: 0.6;
+    @media(max-width:1000px){
+        height: 60px;
+        margin: 20px;
+      }
+      img{@media(max-width:1000px){
+        width: cover;
+      }}
+ }
+
+}
+}
+}
