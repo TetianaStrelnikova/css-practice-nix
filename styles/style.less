@@ -1,9 +1,17 @@
 // out: "styles.css", compress: true, sourceMap: true
 @import "vars.less";
 
+.submit{
+    margin-top:25px;
+    padding:10px 40px;
+    border-radius: 20px;
+    border:none;
+}
+
 container{
     background-color: @bg-light-color;
     font-family: @font-main;
+    width: 100%;
 }
 .logo{
     margin-left: 45px;
@@ -11,14 +19,17 @@ container{
     max-height: 51px;
 }
 header{
-        margin-top: 10px;
+    
+        padding-top: 10px;
         display: flex;
         justify-content: space-between;
         align-items:baseline;
         font-size: 20px;
         color: @menu-text-color ;
+        background-color: @bg-dark-color;
         ul{ padding-left: 0%;
-            list-style: none;}
+            list-style: none;
+       }
     
     .nav-links{
             display: flex;
@@ -68,30 +79,50 @@ header{
             }
 section{
     font-family: @font-secondary;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    
     .form{
-        margin:50px;
-    padding: 30px;
+        background-color: @bg-dark-color;
+        padding: 50px;
+        
             h2{
                 text-transform: capitalize;
-                font-size: 45px;
-                font-weight: 600;
-                line-height: 20px;}
+                font-size: 55px;
+                line-height: 40px;
+                font-weight: 600;}
             h5{font-family:@font-main ;
                 font-size: 16px;
                 font-weight:600;
             }
-            input{
-                background-color:@bg-blue-color;
-                margin-top:25px;
-                padding:10px 20px;
-                border-radius: 20px;
-                border:none;
+            form{
+           align-items: center;
             
+            input{
+                background-color:@secondary-light-color;
+                 .submit
+                 
+                }
+            input:last-of-type{
+                max-width: 50px;
             }
-            .submit{background-color: @secondary-dark-color;
-                margin-top:25px;
-                padding:10px 40px;
-                border-radius: 20px;
-                border:none;
-            color: white;}
+            button{ 
+
+                color: white;
+                background-color: @secondary-dark-color;
+                .submit }
             }}
+        .pic{
+            background-color:@secondary-light-color;
+            position: relative;
+            img{
+            position: absolute;
+            top: 29%;
+            left: 20%;
+            box-sizing: border-box;
+            height: auto;}
+        }
+        
+        
+        }
+           
