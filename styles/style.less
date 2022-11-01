@@ -27,8 +27,17 @@ container{
        
    }
    @media  (max-width: 750px){
-    max-width: 80px;
-    padding-left: 0px;
+    
+    padding-left: 10px;
+   
+}
+@media  (max-width: 550px){
+    max-width: 50px;
+    margin-left: 0;
+   
+}
+@media  (max-width: 400px){
+    display: none;
    
 }
 }
@@ -41,7 +50,7 @@ header{
         background-color: @bg-dark-color;
         @media  (max-width: 900px){
             font-size: 12px;}
-
+   
 
         ul{ padding-left: 0%;
             list-style: none; }
@@ -49,6 +58,7 @@ header{
     .nav-links{
             display: flex;
             justify-content: space-around;
+
             padding-left: 0%;
             margin-top:20px;
             margin-right: 40px;
@@ -57,12 +67,17 @@ header{
             @media  (max-width: 750px){
                 margin-right: 10px;
             }
+            @media  (max-width: 400px){
+               flex-direction: row-reverse;
+               
+            }
             li{
            padding: 20px;
            margin: 0 10px;
            @media  (max-width: 700px){
             padding: 10px;
-            margin: 0 5px;
+            margin: 0 20px;
+           
         }
             @media  (max-width: 600px){
             padding: 0px;
@@ -86,7 +101,10 @@ header{
                 border-radius: 12px;
                 transition: all ease 300ms;
                 &:hover{ color:darken(@secondary-dark-color, 30%);}}
-            ul{
+            ul{ 
+               
+          
+
                 &:hover{cursor: pointer;
                         li{display: flex;}}
                 li{ display: none;
@@ -101,6 +119,7 @@ header{
                         margin: 0%;
                     }
                     a:hover{ color:darken(@menu-text-color, 30%);}
+                 
                    }
                 }}
             
@@ -111,13 +130,20 @@ section{
     grid-template-columns: 40% 60%;
     @media  (max-width: 600px){
         grid-template-columns: 50% 50%;}
+        @media  (max-width: 550px){
+            grid-template-columns: 100% ;}
     .form{
         background-color: @bg-dark-color;
-       padding: 70px;
-       @media  (max-width: 750px){
+        padding: 70px;
+        @media  (max-width: 750px){
         padding-top: 10px;
         padding-left: 30px;
-       padding-bottom: 30px;
+        padding-bottom: 30px;
+        @media  (max-width: 550px){
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        }
     }
             h2{
                 text-transform: capitalize;
@@ -140,48 +166,82 @@ section{
             font-size: 18px;
                 line-height: 15px;
             }
+            @media  (max-width: 550px){
+                font-size: 25px;
+                    line-height: 25px;
+                }
+                @media  (max-width: 450px){
+                    font-size: 20px;
+                    line-height: 25px;
+                 }
+                 @media  (max-width: 350px){
+                    font-size: 18px;
+                    line-height: 25px;
+                 }
+         
            }
             h5{font-family:@font-main ;
                 font-size: 16px;
                 font-weight:600;
                 @media  (max-width: 1100px){
                     font-size: 12px;
-               }
+               } 
+           
             }
+          
             form{
            align-items: center;
-            
+           @media  (max-width: 550px){
+            text-align:right;
+            }
+         
             input{
                 background-color:@secondary-light-color;
                  .submit;
                 
-                 @media  (max-width: 850px){
-                    max-width: 100px;
-                   
-               }
-               @media  (max-width: 600px){
-                max-width: 70px;}
-                 
+                @media  (max-width: 850px){
+                    max-width: 100px; }
+                @media  (max-width: 600px){
+                max-width: 70px;
+            }
+            @media  (max-width: 550px){
+               margin-top: 20px;
+            }
+            @media  (max-width: 350px){
+                padding-left:20px;
+                padding-right: 20px;
+             }
                 }
+                
+        
             input:last-of-type{
                 max-width: 50px;
-                
-                
+           
             }
+
             button{ 
                 color: white;
                 background-color: @secondary-dark-color;
-                .submit }
+                .submit ;
+                @media  (max-width: 350px){
+                    padding-left:20px;
+                    padding-right: 20px;
+                 }
+              }
+
             }}
     .pic{
             background-color:@secondary-light-color;
             position: relative;  
-           
+            @media  (max-width: 550px){
+            position: static;
+            }
             img{
             position: absolute;
             bottom: -5%;
             left: 20%;
             box-sizing: border-box;
+
         
             @media  (max-width: 1300px){
                 max-width: 500px;
@@ -198,6 +258,8 @@ section{
             @media  (max-width: 700px){
                 max-width: 250px;
                 left: 5%;}
-            @media  (max-width: 555px){
-                max-width: 200px;    }}}
+            @media  (max-width: 550px){
+                max-width: 200px; 
+            position: relative;   }
+            }}
             }
