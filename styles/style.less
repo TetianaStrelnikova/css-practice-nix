@@ -63,11 +63,15 @@ hr{ width: 35px;
     margin: 0 auto;
     background-color: @bg-footer-color;
     height: 1px}
+body{
+    margin: 0;
+}
 container{
     background-color: @bg-light-color;
     font-family: @font-main;
     width: 100% !important;
-    margin: 0;}
+    margin: 0;
+}
 .logo{
         margin-left: 25px;
         max-width: 130px;
@@ -269,7 +273,8 @@ header{
         p{font-size: 20px;}
         @media(max-width:600px){
             flex-direction: column;
-        text-align: center;}
+        text-align: center;
+        font-size: 16px;}
     }}
 .call{
     width: 60%;
@@ -286,7 +291,10 @@ p{
     margin: 0 auto;
     max-width: 700px;
     font-size: 20px;
-    line-height: 50px;}
+    line-height: 50px;
+    @media(max-width:600px){
+    font-size: 16px;
+}}
 button{
     .submit;
     background-color: @bg-footer-color;
@@ -300,10 +308,95 @@ button{
     width: fit-content;
     position: absolute;
     top:0;
-    left:0;}
+    left:0;
+@media(max-width:550px){
+    width: 50%;
+}}
 .wave-2{
     opacity: 0.2;
     width: fit-content;
     position: absolute;
     bottom:0;
-    right:0;}}
+    right:0;
+    @media(max-width:300px){
+        width: 50%;
+    }}}
+.compare{
+        background-color: @bg-dark-blue-color;
+        width: 100%; 
+        min-height: 250px;
+        margin-bottom: 10%;
+        position: relative;
+        z-index: 1;
+    .hex-1{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: fit-content;
+        z-index: -1;
+        @media(max-width:300px){
+            width: 50%;
+        }}
+    .hex-2{
+        position: absolute;
+       top: 0;
+        right: 0;
+        width: fit-content;
+        z-index: -1;
+    }
+    form{
+            align-items: baseline;
+            display: flex;
+            justify-content: space-around;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            padding-left: 10%;
+            padding-right:10%;
+        @media(max-width:1350px){
+            flex-direction: column;
+            align-items: center;
+        }
+            
+    button{
+            background-color: @bg-dark-blue-color;
+            color: @bg-light-color;
+            font-size: 20px;
+            padding: 15px 100px;
+            border-radius: 30px;
+            border: 1px @bg-light-color solid;
+            grid-column: 3 / 4;
+            grid-row: 2/2;
+            margin-top:20px;
+            @media(max-width:1350px){
+                margin-top: 10%;
+            }
+            @media(max-width:600px){
+                font-size: 12px;
+            }
+            @media(max-width:300px){
+                padding:15px 20px;
+            }}
+    input{
+            font-size: 20px;
+            background-color: @bg-light-color;
+            padding:15px 40px;
+            border-radius: 30px;
+            min-width: 150px;
+            border: solid 1px @bg-dark-blue-color;
+            @media(max-width:600px){
+                font-size: 12px;
+            }
+            @media(max-width:300px){
+                padding:15px 20px;
+            }}
+    label{
+            display: block;
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: @bg-light-color;
+            @media(max-width:1350px){
+                margin-top: 10%;
+            }
+            @media(max-width:600px){
+                font-size: 16px;
+            }}}}
