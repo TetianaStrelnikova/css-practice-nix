@@ -508,15 +508,27 @@ div{
     text-align: center;
 .quastions{
     margin: 0 auto;
+    margin-bottom: 5%;
     padding: 5%;
     text-align: left;
     display: grid;
     grid-template-columns: 50% 50%;
     gap:30px ;
     @media(max-width:600px){
-        grid-template-columns: 100%;
-    margin-top:10% ;}
-    
-    
-}
+    grid-template-columns: 100%;
+    margin-top:10% ;}}}
+.map{
+    width: 100%;
+    background-image: url(/images/map.png);
+    padding: 5% 15%;
+.adress{
+        background-color: @bg-light-color;
+        max-width: 200px;
+        border-radius: 8px;
+        box-shadow: @shadow;
+        padding: 5%;
+        p{
+            font-size: 18px;
+        }
+    }
 }
