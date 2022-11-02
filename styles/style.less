@@ -5,20 +5,51 @@
     padding:10px 40px 10px 40px;
     border-radius: 20px;
     border:none;
-    font-size: 12px;
-   
-}
+    font-size: 12px;}
+h1{
+    text-transform: capitalize;
+    font-size: 55px;
+    line-height: 40px;
+    font-weight: 600;
+    @media  (max-width: 1300px){
+        font-size: 40px;
+        line-height: 30px;}
+    @media  (max-width: 1100px){
+        font-size: 30px;
+        line-height: 25px;}
+    @media  (max-width: 850px){
+    font-size: 22px;
+    line-height: 20px;}
+    @media  (max-width: 600px){
+    font-size: 18px;
+    line-height: 15px;}
+    @media  (max-width: 550px){
+    font-size: 25px;
+        line-height: 25px;}
+    @media  (max-width: 450px){
+        font-size: 20px;
+        line-height: 25px;}
+    @media  (max-width: 350px){
+        font-size: 18px;
+        line-height: 25px;}}
+h2{ 
+    font-weight: 300;
+    font-size: 55px;
+@media(max-width: 800px){font-size: 40px;}
+@media(max-width: 550px){font-size: 30px;}}
 h4{
     font-size: 40px;
     color: @bg-footer-color;
     font-weight: 300;
     margin: 20px auto;
     @media(max-width:1000px){
-    font-size: 25px;
-    
-      }
-
-}
+    font-size: 25px;}}
+h5{
+    font-family:@font-main ;
+        font-size: 16px;
+        font-weight:600;
+        @media  (max-width: 1100px){
+            font-size: 12px;}}
 h6{
     text-transform: uppercase;
     color: darken( @menu-text-color, 40%);
@@ -26,8 +57,8 @@ h6{
     font-size: 16px;
     margin: 20px auto;
     @media(max-width:450px){
-        font-size: 12px;}
-}
+        font-size: 12px;}}
+
 hr{ width: 35px;
     margin: 0 auto;
     background-color: @bg-footer-color;
@@ -35,34 +66,24 @@ hr{ width: 35px;
 container{
     background-color: @bg-light-color;
     font-family: @font-main;
-    width: 100%;
-}
+    width: 100% !important;
+    margin: 0;}
 .logo{
-    margin-left: 25px;
-    max-width: 130px;
-    max-height: 51px;
-    padding-left: 40px;
-    height: auto;
+        margin-left: 25px;
+        max-width: 130px;
+        max-height: 51px;
+        padding-left: 40px;
+        height: auto;
     @media  (max-width: 850px){
         max-width: 100px;
-        margin-left: 30px;
-       
-   }
-   @media  (max-width: 750px){
-    
-    padding-left: 10px;
-   
-}
-@media  (max-width: 550px){
-    max-width: 50px;
-    margin-left: 0;
-   
-}
-@media  (max-width: 400px){
-    display: none;
-   
-}
-}
+        margin-left: 30px;}
+    @media  (max-width: 750px){
+        padding-left: 10px;}
+    @media  (max-width: 550px){
+        max-width: 50px;
+        margin-left: 0;}
+    @media  (max-width: 400px){
+        display: none;}}
 header{
         display: flex;
         justify-content: space-between;
@@ -70,258 +91,175 @@ header{
         font-size: 20px;
         color: @menu-text-color ;
         background-color: @bg-dark-color;
-        @media  (max-width: 900px){
-            font-size: 12px;}
-   
-
-        ul{ padding-left: 0%;
-            list-style: none; }
-    
+    @media  (max-width: 900px){
+        font-size: 12px;}
+    ul{ 
+        padding-left: 0%;
+        list-style: none; }
     .nav-links{
             display: flex;
             justify-content: space-around;
-
             padding-left: 0%;
             margin-top:20px;
             margin-right: 40px;
             list-style: none;
             transition: all ease 300ms;
-            @media  (max-width: 750px){
-                margin-right: 10px;
-            }
-            @media  (max-width: 400px){
-               flex-direction: row-reverse;
-        
-            }
-            li{
-           padding: 20px;
-           margin: 0 10px;
-           @media  (max-width: 700px){
+        @media  (max-width: 750px){
+            margin-right: 10px;}
+        @media  (max-width: 400px){
+            flex-direction: row-reverse;}
+        li{
+            padding: 20px;
+            margin: 0 10px;
+        @media  (max-width: 700px){
             padding: 10px;
-            margin: 0 5px;
-    
-        }
-            @media  (max-width: 600px){
+            margin: 0 5px;}
+        @media  (max-width: 600px){
             padding: 0px;
             margin: 10px;}
-            &:hover{ color: darken(@menu-text-color,30%);}
-            span{ color:lighter(@menu-text-color, 30%);
-                font-size: 14px;}
-            }
-            a{  
-                text-decoration: none;
-                color: @menu-text-color;
-                padding:15px 30px; 
-                transition: all ease 300ms;
-                &:hover{ color:darken(@secondary-dark-color, 30%);}
-                @media  (max-width: 600px){
-                    padding:10px 15px;}
-                }
-            .contact{
-                color: @secondary-dark-color;
-                border:solid  1px @secondary-dark-color;
-                border-radius: 12px;
-                transition: all ease 300ms;
-                &:hover{ color:darken(@secondary-dark-color, 30%);}}
-            ul{ 
-
-                &:hover{cursor: pointer;
-                        li{display: flex;}}
-                li{ display: none;
-                    flex-direction: column;
-                    margin: 0%;
-                    transition: all ease 300ms 1s;
-                    padding-left: 0%;
-                    a{  
-                        text-align: start;
-                        padding-right: 10px;
-                        padding-left: 0%;
-                        margin: 0%;
-                    }
-                    a:hover{ color:darken(@menu-text-color, 30%);}
-                 
-                   }
-                }} }
+        &:hover{ 
+            color: darken(@menu-text-color,30%);}
+        span{ 
+            color:lighter(@menu-text-color, 30%);
+            font-size: 14px;}}
+        a{  
+            text-decoration: none;
+            color: @menu-text-color;
+            padding:15px 30px; 
+            transition: all ease 300ms;
+        &:hover{ color:darken(@secondary-dark-color, 30%);}
+        @media  (max-width: 600px){
+            padding:10px 15px;}}
+        .contact{
+            color: @secondary-dark-color;
+            border:solid  1px @secondary-dark-color;
+            border-radius: 12px;
+            transition: all ease 300ms;
+        &:hover{ color:darken(@secondary-dark-color, 30%);}}
+        ul{ 
+        &:hover{cursor: pointer;
+        li{
+            display: flex;}}
+        li{ 
+            display: none;
+            flex-direction: column;
+            margin: 0%;
+            transition: all ease 300ms 1s;
+            padding-left: 0%;
+        a{  
+            text-align: start;
+            padding-right: 10px;
+            padding-left: 0%;
+            margin: 0%;}
+        a:hover{ 
+            color:darken(@menu-text-color, 30%);}}}}}
 .hero{
-    font-family: @font-secondary;
-    display: grid;
-    grid-template-columns: 40% 60%;
+        font-family: @font-secondary;
+        display: grid;
+        grid-template-columns: 40% 60%;
     @media  (max-width: 600px){
         grid-template-columns: 50% 50%;}
-        @media  (max-width: 550px){
-            grid-template-columns: 100% ;}
+    @media  (max-width: 550px){
+        grid-template-columns: 100% ;}
     .form{
         background-color: @bg-dark-color;
         padding: 70px;
-        @media  (max-width: 750px){
+    @media  (max-width: 750px){
         padding-top: 10px;
         padding-left: 30px;
         padding-bottom: 30px;
-        @media  (max-width: 550px){
+    @media  (max-width: 550px){
         display: flex;
         justify-content: space-between;
         padding: 10px;
-        }
-    }
-            h2{
-                text-transform: capitalize;
-                font-size: 55px;
-                line-height: 40px;
-                font-weight: 600;
-                @media  (max-width: 1300px){
-                    font-size: 40px;
-                    line-height: 30px;
-                }
-                @media  (max-width: 1100px){
-                    font-size: 30px;
-                    line-height: 25px;
-               }
-               @media  (max-width: 850px){
-                font-size: 22px;
-                line-height: 20px;
-           }
-           @media  (max-width: 600px){
-            font-size: 18px;
-                line-height: 15px;
-            }
-            @media  (max-width: 550px){
-                font-size: 25px;
-                    line-height: 25px;
-                }
-                @media  (max-width: 450px){
-                    font-size: 20px;
-                    line-height: 25px;
-                 }
-                 @media  (max-width: 350px){
-                    font-size: 18px;
-                    line-height: 25px;
-                 }
-         
-           }
-            h5{font-family:@font-main ;
-                font-size: 16px;
-                font-weight:600;
-                @media  (max-width: 1100px){
-                    font-size: 12px;
-               } 
-           
-            }
-          
-            form{
-           align-items: center;
-           @media  (max-width: 550px){
-            text-align:right;
-            }
-         
-            input{
-                background-color:@secondary-light-color;
-                 .submit;
-                
-                @media  (max-width: 850px){
-                    max-width: 100px; }
-                @media  (max-width: 600px){
-                max-width: 70px;
-            }
-            @media  (max-width: 550px){
-               margin-top: 20px;
-            }
-            @media  (max-width: 350px){
-                padding-left:20px;
-                padding-right: 20px;
-             }
-                }
-                
-        
-            input:last-of-type{
-                max-width: 50px;
-           
-            }
-
-            button{ 
-                color: white;
-                background-color: @secondary-dark-color;
-                .submit ;
-                @media  (max-width: 350px){
-                    padding-left:20px;
-                    padding-right: 20px;
-                 }
-              }
-
-            }}
+        }}
+    form{
+        align-items: center;
+    @media  (max-width: 550px){
+        text-align:right;}
+    input{
+        background-color:@secondary-light-color;
+        .submit;
+    @media  (
+        max-width: 850px){
+        max-width: 100px; }
+    @media  (max-width: 600px){
+        max-width: 70px;}
+    @media  (
+        max-width: 550px){
+        margin-top: 20px;}
+    @media  (
+        max-width: 350px){
+        padding-left:20px;
+        padding-right: 20px;}}
+    input:last-of-type{
+        max-width: 50px;}
+    button{ 
+        color: white;
+        background-color: @secondary-dark-color;
+        .submit ;
+    @media  (
+        max-width: 350px){
+        padding-left:20px;
+        padding-right: 20px;}}}}
     .pic{
             background-color:@secondary-light-color;
             position: relative;  
-            @media  (max-width: 550px){
+        @media  (max-width: 550px){
             position: static;
             }
-            img{
+        img{
             position: absolute;
             bottom: -5%;
             left: 20%;
             box-sizing: border-box;
-
-        
-            @media  (max-width: 1300px){
+        @media  (max-width: 1300px){
                 max-width: 500px;
-                left:10%;
-            }
-            @media  (max-width: 1100px){
-                 left:10%;
-            }
-            @media  (max-width: 1100px){
-                max-width: 400px;
-            }
-            @media  (max-width: 750px){
-            max-width: 300px;}
-            @media  (max-width: 700px){
+                left:10%;}
+        @media(max-width: 1100px){
+                left:10%;}
+        @media  (max-width: 1100px){
+                max-width: 400px;}
+        @media  (max-width: 750px){
+                max-width: 300px;}
+        @media  (max-width: 700px){
                 max-width: 250px;
                 left: 5%;}
-            @media  (max-width: 550px){
+        @media  (max-width: 550px){
                 max-width: 200px; 
-            position: relative;   }
-            }}}
+                position: relative;}}}}
 .features{
-    margin-top: 10%;
-    text-align: center;
+        margin-top: 10%;
+        text-align: center;
     .features-cards{
-    display: flex;
-    justify-content: space-around;
-    box-shadow: @shadow;
-    margin: 50px;
+        display: flex;
+        justify-content: space-around;
+        box-shadow: @shadow;
+        margin: 50px;
     @media(max-width:600px){
         flex-direction: column;
         align-items: center;
-        margin: 20px;
-    }
+        margin: 20px;}
     .card{
-    max-width: 250px;
-    margin: 70px;
-    margin-bottom: 30px;
-   
+        max-width: 250px;
+        margin: 70px;
+        margin-bottom: 30px;
     @media(max-width:1000px){
-       margin: 20px;
-    }
+        margin: 20px;}
     @media(max-width:600px){
-       max-width: 300px;
-      }
- 
+        max-width: 300px;}
     .image{
-    height: 100px;
-    opacity: 0.6;
+        height: 100px;
+        opacity: 0.6;
     @media(max-width:1000px){
         height: 60px;
-        margin: 20px;
-      }
-      img{@media(max-width:1000px){
-        width: cover;
-      }}
- }
-
-}
-}}
+        margin: 20px;}
+    img{@media(max-width:1000px){
+        width: cover;}}}}}}
 .how{
     text-align: center;
     margin-top: 10%;
+    margin-bottom: 10%;
     padding: 5%;
     background-color: @bg-dark-color;
     .how-cards{
@@ -329,5 +267,43 @@ header{
         text-align: start;
         justify-content: space-around;
         p{font-size: 20px;}
-    }
+        @media(max-width:600px){
+            flex-direction: column;
+        text-align: center;}
+    }}
+.call{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    color: @bg-light-color;
+    text-align: center;
+    background-color: @bg-dark-blue-color;
+    position: relative;
+    padding:5% ;
+    @media(max-width: 1000px){width: 80%;}
+
+p{  
+    margin: 0 auto;
+    max-width: 700px;
+    font-size: 20px;
+    line-height: 50px;}
+button{
+    .submit;
+    background-color: @bg-footer-color;
+    color: @bg-light-color;
+    font-size: 16px;
+    padding:20px 40px;
+    border-radius: 30px;
 }
+.wave-1{
+    opacity: 0.2;
+    width: fit-content;
+    position: absolute;
+    top:0;
+    left:0;}
+.wave-2{
+    opacity: 0.2;
+    width: fit-content;
+    position: absolute;
+    bottom:0;
+    right:0;}}
