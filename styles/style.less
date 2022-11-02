@@ -467,27 +467,43 @@ button{
     margin-top: 5%;
     margin-bottom: 5%;
 div{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    opacity: 0.5;
-  
-
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        opacity: 0.5;
     img{
-        @media(max-width:1000px){
-       max-width: 8rem;
-       height: 4rem;
-    }
-    
-        @media(max-width:600px){
-       max-width: 5rem;
-       height: 3rem;
-    }
+    @media(max-width:1000px){
+        max-width: 8rem;
+        height: 4rem;}
+    @media(
+        max-width:600px){
+        max-width: 5rem;
+        height: 3rem;}
     @media(max-width:500px){
         max-width: 3rem;
-        height:2rem;
-     }
-}
-}
+        height:2rem;}}}}
+.reviews{
+    text-align: center;
+.review-cards
+    {display: flex;
+    justify-content: space-around;
+    @media(max-width:800px){
+        flex-direction: column;
+    align-items: center;}}
+.review{ 
+    margin-top: 5%;
+    margin-bottom: 10%;
+    padding: 5%;
+    box-shadow: @shadow;
+    max-width: 500px;
+    background-image: url(/images/bg-symbol.png);
+    background-repeat: no-repeat;
+    background-position: center;}
+    opacity: 0.8;
+    @media(max-width:800px){
+        margin-left:auto;
+        margin-right:auto;}}
+.faq{
+    text-align: center;
 }
