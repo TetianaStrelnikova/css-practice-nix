@@ -84,9 +84,9 @@ container{
     @media  (max-width: 850px){
         max-width: 100px;
         margin-left: 30px;}
-    @media  (max-width: 600px){
-       display: none;}
-    }
+    @media  (max-width: 750px){
+        padding-left: 0px;
+        margin-left: 10px;}}
 header{
         display: flex;
         justify-content: space-between;
@@ -96,6 +96,9 @@ header{
         background-color: @bg-dark-color;
     @media  (max-width: 900px){
         font-size: 12px;}
+        @media  (max-width: 600px){
+           flex-direction: column-reverse;
+       }
     ul{ 
         padding-left: 0%;
         list-style: none; }
